@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
 
 namespace ZoolandiaRazor.Models
 {
@@ -8,6 +12,7 @@ namespace ZoolandiaRazor.Models
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; }
         public int EmployeeAge { get; set; }
-        public virtual Habitat HabitatId { get; set; }
+
+        public virtual List<Habitat> Habitats { get; set; }
     }
 }

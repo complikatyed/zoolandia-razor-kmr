@@ -11,5 +11,9 @@ namespace ZoolandiaRazor.Models
         public string CommonName { get; set; }
         public int Age { get; set; }
 
+        public int HabitatId { get; set; }
+
+        public virtual Habitat Habitat { get; set; }
+
     }
 }
