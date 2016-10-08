@@ -19,5 +19,17 @@ namespace ZoolandiaRazor.DAL
         {
             Context = _context;
         }
+
+        public List<Animal> GetAnimals()
+        {
+            int i = 1;
+            return Context.Animals.ToList();
+        }
+
+        public List<Habitat> GetHabitats()
+        {
+            int i = 1;
+            return Context.Habitats.ToList();
+        }
     }
 }
