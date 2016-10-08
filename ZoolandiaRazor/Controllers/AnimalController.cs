@@ -3,17 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ZoolandiaRazor.DAL;
+using ZoolandiaRazor.Models;
 
 namespace ZoolandiaRazor.Controllers
 {
     public class AnimalController : Controller
     {
+        private ZoolandiaRepository repo = new ZoolandiaRepository();
+
         // GET: Animal
         //[Route(“/Animal/Detail/{id}”)]
         public ActionResult Index()
         {
+            List<Animal> list_of_animals = repo.GetAnimals();
             ViewBag.Message = "Let's look at some animals, yo!";
-            //ViewBag.Animal = id;
+            ViewBag.Animals = list_of_animals;
 
             return View();
         }
