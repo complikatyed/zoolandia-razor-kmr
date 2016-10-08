@@ -1,8 +1,8 @@
 # Zoolandia Razor
 
-For this exercise you will create a trival web application that will Read entries stored within a database.
+For this exercise you will create a trivial web application that will read entries stored within a database.
 
-The goal of this project is to help students learn how to develop a web application using a tested Repository Pattern while implmenting Views in Razor. Students are tasked with completing a [Zoolandia ERD](./DBS_ZOOLANDIA_ERD.md) as it is to be used for their models.
+The goal of this project is to help students learn how to develop a web application using a tested Repository Pattern while implementing Views in Razor. Students are tasked with completing a [Zoolandia ERD](./DBS_ZOOLANDIA_ERD.md) as it is to be used for their models.
 
 This solution contains:
 1. ASP.NET Web Application Project
@@ -19,9 +19,9 @@ This solution contains:
 should only be responsible for receiving user input and printing output.
 
 
-## Speicifications
+## Specifications
 
-You'll need to write produce the following HTML responses about Zoolandia.
+You'll need to produce the following HTML responses about Zoolandia.
 
 1. `/Animal` - The View should display a simple HTML list of all animals in your database. You should display the following information about each animal.
     1. Animal name (this information will be an anchor to take the user to the specific animal view)
@@ -42,3 +42,4 @@ You'll need to write produce the following HTML responses about Zoolandia.
     1. List the employees currently assigned to maintenance of the habitat
 1. `/Employee/` - List all employees
 1. `/Employee/Details/1` - Show employees name, age, and habitats currently assigned to
+
