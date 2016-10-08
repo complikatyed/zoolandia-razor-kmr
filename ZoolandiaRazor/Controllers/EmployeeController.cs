@@ -11,6 +11,7 @@ namespace ZoolandiaRazor.Controllers
         // GET: Employee
         public ActionResult Index()
         {
+            ViewBag.Message = "What a great looking group of employees!";
             return View();
         }
 
