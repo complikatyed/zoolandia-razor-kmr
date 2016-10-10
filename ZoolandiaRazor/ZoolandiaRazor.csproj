@@ -131,8 +131,8 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HabitatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="DAL\ZoolandiaContext.cs" />
-    <Compile Include="DAL\ZoolandiaRepository.cs" />
+    <Compile Include="DAL\ZooContext.cs" />
+    <Compile Include="DAL\ZooRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

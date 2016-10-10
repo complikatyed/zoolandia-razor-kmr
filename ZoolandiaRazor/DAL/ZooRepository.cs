@@ -6,16 +6,16 @@ using ZoolandiaRazor.Models;
 
 namespace ZoolandiaRazor.DAL
 {
-    public class ZoolandiaRepository
+    public class ZooRepository
     {
-        public ZoolandiaContext Context { get; set; }
+        public ZooContext Context { get; set; }
 
-        public ZoolandiaRepository()
+        public ZooRepository()
         {
-            Context = new ZoolandiaContext();
+            Context = new ZooContext();
         }
 
-        public ZoolandiaRepository(ZoolandiaContext _context)
+        public ZooRepository(ZooContext _context)
         {
             Context = _context;
         }
