@@ -31,5 +31,11 @@ namespace ZoolandiaRazor.DAL
             int i = 1;
             return Context.Habitats.ToList();
         }
+
+        public List<Employee> GetEmployees()
+        {
+            int i = 1;
+            return Context.Employees.ToList();
+        }
     }
 }
