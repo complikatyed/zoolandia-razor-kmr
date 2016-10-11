@@ -36,6 +36,41 @@ namespace ZoolandiaRazor.Tests.DAL
             mock_animal_table.Setup(t => t.Remove(It.IsAny<Animal>())).Callback((Animal a) => animal_list.Remove(a));
         }
 
+        [TestInitialize]
+        public void Initialize()
+        {
+            mock_context = new Mock<ZooContext>();
+            mock_animal_table = new Mock<DbSet<Animal>>();
+            animal_list = new List<Animal>();
+            repo = new ZooRepository(mock_context.Object);
+
+            ConnectMocksToDatastore();
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            repo = null;
+        }
+
+        [TestMethod]
+        public void RepoEnsureCanCreateInstance()
+        {
+            ZooRepository repo = new ZooRepository();
+            Assert.IsNotNull(repo);
+        }
+
+        [TestMethod]
+        public void RepoEnsureRepoHasContext()
+        {
+            ZooRepository repo = new ZooRepository();
+
+            ZooContext actual_context = repo.Context;
+
+            Assert.IsInstanceOfType(actual_context, typeof(ZooContext));
+
+        }
+
 
     }
 
