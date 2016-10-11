@@ -26,11 +26,24 @@ namespace ZoolandiaRazor.DAL
             return Context.Animals.ToList();
         }
 
+        public Animal GetAnimalById(int id)
+        {
+            Animal selected_animal = Context.Animals.First(a => a.AnimalId == id);
+            return selected_animal;
+        }
+
+        public void AddAnimal(Animal animal)
+        {
+            Context.Animals.Add(animal);
+            Context.SaveChanges();
+        }
+
         public List<Habitat> GetHabitats()
         {
             int i = 1;
             return Context.Habitats.ToList();
         }
+
 
         public List<Employee> GetEmployees()
         {

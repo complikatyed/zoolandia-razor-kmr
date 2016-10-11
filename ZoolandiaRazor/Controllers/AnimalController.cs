@@ -27,6 +27,8 @@ namespace ZoolandiaRazor.Controllers
         // GET: Animal/Details/5
         public ActionResult Details(int id)
         {
+            //chosen_animal = repo.GetAnimal(int id);
+
             return View();
         }
 
