@@ -24,10 +24,12 @@ namespace ZoolandiaRazor.Controllers
         }
 
 
-        // GET: Animal/Details/5
+        // GET: /Animal/Details/5
         public ActionResult Details(int id)
         {
-            //chosen_animal = repo.GetAnimal(int id);
+            Animal selected_animal = repo.GetAnimalById(id);
+
+            ViewBag.Animal = selected_animal;
 
             return View();
         }

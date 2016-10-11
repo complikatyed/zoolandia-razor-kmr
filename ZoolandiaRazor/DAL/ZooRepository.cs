@@ -30,6 +30,8 @@ namespace ZoolandiaRazor.DAL
         {
             Animal selected_animal = Context.Animals.First(a => a.AnimalId == id);
             return selected_animal;
+
+            // Kate says you can return the query itself to get back the item
         }
 
         public void AddAnimal(Animal animal)
