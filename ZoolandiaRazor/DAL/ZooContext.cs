@@ -8,7 +8,7 @@ using System.Web;
 
 namespace ZoolandiaRazor.DAL
 {
-    public class ZoolandiaContext : DbContext
+    public class ZooContext : DbContext
     {
         public virtual DbSet<Animal> Animals { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }

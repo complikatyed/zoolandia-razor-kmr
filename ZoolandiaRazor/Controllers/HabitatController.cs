@@ -10,7 +10,7 @@ namespace ZoolandiaRazor.Controllers
 {
     public class HabitatController : Controller
     {
-        private ZoolandiaRepository repo = new ZoolandiaRepository();
+        private ZooRepository repo = new ZooRepository();
 
         // GET: Habitat
         public ActionResult Index()

@@ -10,7 +10,7 @@ namespace ZoolandiaRazor.Controllers
 {
     public class EmployeeController : Controller
     {
-        private ZoolandiaRepository repo = new ZoolandiaRepository();
+        private ZooRepository repo = new ZooRepository();
         // GET: Employee
         public ActionResult Index()
         {

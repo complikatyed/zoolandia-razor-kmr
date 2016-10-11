@@ -10,7 +10,7 @@ namespace ZoolandiaRazor.Controllers
 {
     public class AnimalController : Controller
     {
-        private ZoolandiaRepository repo = new ZoolandiaRepository();
+        private ZooRepository repo = new ZooRepository();
 
         // GET: Animal
         //[Route(“/Animal/Detail/{id}”)]

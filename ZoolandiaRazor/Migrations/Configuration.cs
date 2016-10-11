@@ -6,14 +6,14 @@ namespace ZoolandiaRazor.Migrations
     using System.Linq;
     using Models;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<ZoolandiaRazor.DAL.ZoolandiaContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ZoolandiaRazor.DAL.ZooContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(ZoolandiaRazor.DAL.ZoolandiaContext context)
+        protected override void Seed(ZoolandiaRazor.DAL.ZooContext context)
         {
             //  This method will be called after migrating to the latest version.
 
