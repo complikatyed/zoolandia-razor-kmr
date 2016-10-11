@@ -2,13 +2,14 @@
     ViewBag.Title = "Animals";
 }
 
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 <ul>
     @{
         for (int i = 0; i < ViewBag.Animals.Count; i++)
         {
-            <li>@ViewBag.Animals[i].Name</li>}
+            <li><a href="/Animal/Details/@ViewBag.Animals[i].AnimalId">@ViewBag.Animals[i].Name</a></li>
+        }
     }
 </ul>
 

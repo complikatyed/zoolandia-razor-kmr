@@ -71,6 +71,59 @@ namespace ZoolandiaRazor.Tests.DAL
 
         }
 
+        [TestMethod]
+        public void RepoEnsureNoAnimals()
+        {
+            // Confused about how this ought to be working with seeding...
+            // I recognize that we don't want to be testing with 'real' data,
+            // But I also don't quite understand WHY we don't want to do at least
+            // *some* tests using seeded data... or are we supposed to seed with Moq?
+            List<Animal> actual_animals = repo.GetAnimals();
+
+            int expected_animals_count = 0;
+            int actual_animals_count = actual_animals.Count();
+
+            Assert.AreEqual(expected_animals_count, actual_animals_count);
+
+        }
+
+        [TestMethod]
+        public void RepoEnsureCanAddAnimalToDatabase()
+        {
+            Animal first_animal = new Animal { Name = "Joe's Animal", Age = 2, CommonName = "Monkeybutt", ScienceName = "Monkeyus Glutteus", HabitatId = 1 };
+        
+            repo.AddAnimal(first_animal);
+
+            int actual_animal_count = repo.GetAnimals().Count;
+
+            int expected_animal_count = 1;
+
+            // Assert
+            Assert.AreEqual(expected_animal_count, actual_animal_count);
+        }
+
+        [TestMethod]
+        public void RepoEnsureCanFindAnimalById()
+        {
+            Animal first_animal = new Animal { AnimalId = 1, Name = "Joe's Animal", Age = 2, CommonName = "Monkeybutt", ScienceName = "Monkeyus Glutteus", HabitatId = 1 };
+            Animal second_animal = new Animal { AnimalId = 2, Name = "Steve's Animal", Age = 2, CommonName = "Software Evolutionizer", ScienceName = "Senex Magister", HabitatId = 2 };
+            Animal third_animal = new Animal { AnimalId = 3, Name = "Jurnell's Animal", Age = 2, CommonName = "Tweetmaster", ScienceName = "Twitterus Imperius", HabitatId = 3 };
+
+            repo.AddAnimal(first_animal);
+            repo.AddAnimal(second_animal);
+            repo.AddAnimal(third_animal);
+
+            int animal_id = 2;
+            Animal chosen_animal = repo.GetAnimalById(animal_id);
+            
+
+            string expected_animal_name = "Steve's Animal";
+
+            string actual_animal_name = chosen_animal.Name;
+
+            Assert.AreEqual(expected_animal_name, actual_animal_name);
+        }
+
 
     }
 
