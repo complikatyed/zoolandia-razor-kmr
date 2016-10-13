@@ -44,9 +44,9 @@ namespace ZoolandiaRazor.Migrations
 
             context.Employees.AddOrUpdate(
                 e => e.EmployeeName,
-                new Employee { EmployeeName = "Jamie", EmployeeAge = 22 },
-                new Employee { EmployeeName = "Andy", EmployeeAge = 43 },
-                new Employee { EmployeeName = "Leslie", EmployeeAge = 52 }
+                new Employee { EmployeeName = "Jamie", EmployeeAge = 22, HabitatId = 2 },
+                new Employee { EmployeeName = "Andy", EmployeeAge = 43, HabitatId = 3 },
+                new Employee { EmployeeName = "Leslie", EmployeeAge = 52, HabitatId = 1 }
                 );
         }
     }
