@@ -13,6 +13,8 @@ namespace ZoolandiaRazor.Models
         public string EmployeeName { get; set; }
         public int EmployeeAge { get; set; }
 
+        public int HabitatId { get; set; }
+
         public virtual List<Habitat> Habitats { get; set; }
     }
 }
